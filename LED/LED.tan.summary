@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.600 ns
+Actual Time    : 25.900 ns
 From           : INITLED[1]
-To             : OUTLED[3]$latch
+To             : OUTLED[4]$latch
 From Clock     : --
 To Clock       : INITLED[2]
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 43.100 ns
-From           : NUMLED[7]$latch
-To             : NUMLED[7]
+Actual Time    : 50.100 ns
+From           : NUMLED[2]$latch
+To             : NUMLED[2]
 From Clock     : CLK
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.500 ns
-From           : DISPLAY[2]
-To             : NUMLED[2]$latch
+Actual Time    : 26.100 ns
+From           : DISPLAY[1]
+To             : NUMLED[1]$latch
 From Clock     : --
 To Clock       : CLK
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 47.17 MHz ( period = 21.200 ns )
+Actual Time    : 21.28 MHz ( period = 47.000 ns )
 From           : COU[0]
-To             : NUMLED[3]$latch
+To             : OUTLED[4]$latch
 From Clock     : CLK
 To Clock       : CLK
 Failed Paths   : 0
@@ -46,8 +46,8 @@ Type           : Clock Setup: 'FLASH'
 Slack          : N/A
 Required Time  : None
 Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
-From           : NUM[1]
-To             : NUM[1]
+From           : NUM[0]
+To             : NUM[2]
 From Clock     : FLASH
 To Clock       : FLASH
 Failed Paths   : 0
@@ -56,8 +56,8 @@ Type           : Clock Hold: 'CLK'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : COU[3]
-To             : NUMLED[5]$latch
+From           : COU[2]
+To             : NUMLED[7]$latch
 From Clock     : CLK
 To Clock       : CLK
 Failed Paths   : 36

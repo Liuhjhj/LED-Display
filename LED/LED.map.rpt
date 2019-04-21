@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LED
-Thu Apr 18 21:21:06 2019
+Fri Apr 19 20:40:32 2019
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -43,12 +43,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Apr 18 21:21:06 2019    ;
+; Analysis & Synthesis Status ; Successful - Fri Apr 19 20:40:32 2019    ;
 ; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name               ; LED                                      ;
 ; Top-level Entity Name       ; LED                                      ;
 ; Family                      ; FLEX10K                                  ;
-; Total logic elements        ; 187                                      ;
+; Total logic elements        ; 236                                      ;
 ; Total pins                  ; 25                                       ;
 ; Total memory bits           ; 0                                        ;
 +-----------------------------+------------------------------------------+
@@ -142,20 +142,20 @@ applicable agreement for further details.
 +-----------------------------------+---------+
 ; Resource                          ; Usage   ;
 +-----------------------------------+---------+
-; Total logic elements              ; 187     ;
-; Total combinational functions     ; 185     ;
-;     -- Total 4-input functions    ; 112     ;
+; Total logic elements              ; 236     ;
+; Total combinational functions     ; 234     ;
+;     -- Total 4-input functions    ; 155     ;
 ;     -- Total 3-input functions    ; 43      ;
-;     -- Total 2-input functions    ; 23      ;
-;     -- Total 1-input functions    ; 7       ;
+;     -- Total 2-input functions    ; 31      ;
+;     -- Total 1-input functions    ; 5       ;
 ;     -- Total 0-input functions    ; 0       ;
 ; Total registers                   ; 8       ;
 ; Total logic cells in carry chains ; 4       ;
 ; I/O pins                          ; 25      ;
-; Maximum fan-out node              ; COU[1]  ;
-; Maximum fan-out                   ; 54      ;
-; Total fan-out                     ; 672     ;
-; Average fan-out                   ; 3.17    ;
+; Maximum fan-out node              ; COU[2]  ;
+; Maximum fan-out                   ; 79      ;
+; Total fan-out                     ; 864     ;
+; Average fan-out                   ; 3.31    ;
 +-----------------------------------+---------+
 
 
@@ -164,7 +164,7 @@ applicable agreement for further details.
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |LED                               ; 187 (183)   ; 8            ; 0           ; 25   ; 179 (175)    ; 2 (2)             ; 6 (6)            ; 4 (0)           ; 0 (0)      ; |LED                                                        ; work         ;
+; |LED                               ; 236 (232)   ; 8            ; 0           ; 25   ; 228 (224)    ; 2 (2)             ; 6 (6)            ; 4 (0)           ; 0 (0)      ; |LED                                                        ; work         ;
 ;    |lpm_add_sub:Add1|              ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |LED|lpm_add_sub:Add1                                       ; work         ;
 ;       |addcore:adder|              ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |LED|lpm_add_sub:Add1|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |LED|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -177,21 +177,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; NUMLED[0]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[1]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[2]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[3]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[4]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[5]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[6]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; NUMLED[7]$latch                                     ; NUMLED[7]~52        ; yes                    ;
-; OUTLED[0]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[1]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[2]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[3]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[4]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[5]$latch                                     ; OUTLED[6]~46        ; yes                    ;
-; OUTLED[6]$latch                                     ; OUTLED[6]~46        ; yes                    ;
+; NUMLED[0]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[1]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[2]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[3]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[4]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[5]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[6]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; NUMLED[7]$latch                                     ; NUMLED[7]~78        ; yes                    ;
+; OUTLED[0]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[1]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[2]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[3]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[4]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[5]$latch                                     ; OUTLED[6]~63        ; yes                    ;
+; OUTLED[6]$latch                                     ; OUTLED[6]~63        ; yes                    ;
 ; Number of user-specified and inferred latches = 15  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -217,8 +217,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; COU[2]                                 ; 52      ;
-; COU[4]                                 ; 31      ;
+; COU[2]                                 ; 79      ;
+; COU[4]                                 ; 42      ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
@@ -266,7 +266,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Apr 18 21:21:05 2019
+    Info: Processing started: Fri Apr 19 20:40:30 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LED -c LED
 Info: Found 2 design units, including 1 entities, in source file LED.VHD
     Info: Found design unit 1: LED-DISPLAYLED
@@ -274,19 +274,20 @@ Info: Found 2 design units, including 1 entities, in source file LED.VHD
 Info: Elaborating entity "LED" for the top level hierarchy
 Warning (10492): VHDL Process Statement warning at LED.VHD(43): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at LED.VHD(54): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(55): signal "ROTATY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(56): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(80): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(94): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(107): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(131): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(145): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(158): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(159): signal "NUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(170): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(171): signal "NUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(182): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LED.VHD(183): signal "NUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(66): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(81): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(95): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(96): signal "ROTATY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(97): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(121): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(135): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(148): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(172): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(186): signal "INITLED" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(199): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(200): signal "NUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(211): signal "DISPLAY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LED.VHD(212): signal "NUM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at LED.VHD(52): inferring latch(es) for signal or variable "NUMLED", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at LED.VHD(52): inferring latch(es) for signal or variable "OUTLED", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "OUTLED[0]" at LED.VHD(52)
@@ -318,43 +319,43 @@ Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|addcore:adder|a_cs
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add1"
 Warning: Latch NUMLED[0]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[1]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[2]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[3]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal process_2~1
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[4]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[5]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal process_2~1
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[6]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch NUMLED[7]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal process_2~1
+    Warning: Ports D and ENA on the latch are fed by the same signal COU[2]
 Warning: Latch OUTLED[0]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[1]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[2]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[3]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal process_2~1
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[4]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[5]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal process_2~1
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
 Warning: Latch OUTLED[6]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[0]
-Info: Implemented 212 device resources after synthesis - the final resource count might be different
+    Warning: Ports D and ENA on the latch are fed by the same signal DISPLAY[1]
+Info: Implemented 261 device resources after synthesis - the final resource count might be different
     Info: Implemented 10 input pins
     Info: Implemented 15 output pins
-    Info: Implemented 187 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Implemented 236 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 249 megabytes
-    Info: Processing ended: Thu Apr 18 21:21:06 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Apr 19 20:40:32 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

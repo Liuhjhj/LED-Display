@@ -1,5 +1,5 @@
 Fitter report for LED
-Thu Apr 18 21:21:08 2019
+Fri Apr 19 20:40:35 2019
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -55,14 +55,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Thu Apr 18 21:21:08 2019    ;
+; Fitter Status         ; Successful - Fri Apr 19 20:40:35 2019    ;
 ; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name         ; LED                                      ;
 ; Top-level Entity Name ; LED                                      ;
 ; Family                ; FLEX10K                                  ;
 ; Device                ; EPF10K20TC144-4                          ;
 ; Timing Models         ; Final                                    ;
-; Total logic elements  ; 187 / 1,152 ( 16 % )                     ;
+; Total logic elements  ; 236 / 1,152 ( 20 % )                     ;
 ; Total pins            ; 25 / 102 ( 25 % )                        ;
 ; Total memory bits     ; 0 / 12,288 ( 0 % )                       ;
 +-----------------------+------------------------------------------+
@@ -139,13 +139,13 @@ applicable agreement for further details.
 +------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; Name       ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
-; INITLED[2] ; 47    ; --  ; 16   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; INITLED[1] ; 46    ; --  ; 17   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; INITLED[0] ; 44    ; --  ; 18   ; 9       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; INITLED[2] ; 47    ; --  ; 16   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; INITLED[1] ; 46    ; --  ; 17   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; INITLED[0] ; 44    ; --  ; 18   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; ROTATY     ; 60    ; --  ; 12   ; 24      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; DISPLAY[2] ; 63    ; --  ; 10   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; DISPLAY[0] ; 65    ; --  ; 9    ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; DISPLAY[1] ; 64    ; --  ; 9    ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; DISPLAY[1] ; 64    ; --  ; 9    ; 16      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; DISPLAY[2] ; 65    ; --  ; 9    ; 17      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; DISPLAY[0] ; 63    ; --  ; 10   ; 20      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; CLK        ; 122   ; --  ; 13   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; CLR        ; 62    ; --  ; 11   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; FLASH      ; 55    ; --  ; --   ; 3       ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
@@ -242,9 +242,9 @@ applicable agreement for further details.
 ; 60    ; ROTATY     ; TTL          ;
 ; 61    ; VCC_IO     ;              ;
 ; 62    ; CLR        ; TTL          ;
-; 63    ; DISPLAY[2] ; TTL          ;
+; 63    ; DISPLAY[0] ; TTL          ;
 ; 64    ; DISPLAY[1] ; TTL          ;
-; 65    ; DISPLAY[0] ; TTL          ;
+; 65    ; DISPLAY[2] ; TTL          ;
 ; 66    ; GND_IO     ;              ;
 ; 67    ; GND*       ;              ;
 ; 68    ; GND*       ;              ;
@@ -327,17 +327,17 @@ applicable agreement for further details.
 +-------+------------+--------------+
 
 
-+--------------------------------------------------------------------------+
-; Control Signals                                                          ;
-+----------+---------+---------+----------------------------+--------------+
-; Name     ; Pin #   ; Fan-Out ; Usage                      ; Global Usage ;
-+----------+---------+---------+----------------------------+--------------+
-; Equal2~1 ; LC3_C10 ; 26      ; Clock enable               ; Non-global   ;
-; CLK      ; 122     ; 5       ; Clock                      ; Non-global   ;
-; CLR      ; 62      ; 5       ; Async. clear / Async. load ; Non-global   ;
-; FLASH    ; 55      ; 3       ; Clock                      ; Pin          ;
-; NUM[2]~5 ; LC7_C7  ; 3       ; Clock enable               ; Non-global   ;
-+----------+---------+---------+----------------------------+--------------+
++----------------------------------------------------------------------------+
+; Control Signals                                                            ;
++-------------+--------+---------+----------------------------+--------------+
+; Name        ; Pin #  ; Fan-Out ; Usage                      ; Global Usage ;
++-------------+--------+---------+----------------------------+--------------+
+; process_1~2 ; LC6_D1 ; 6       ; Clock enable               ; Non-global   ;
+; CLK         ; 122    ; 5       ; Clock                      ; Non-global   ;
+; CLR         ; 62     ; 5       ; Async. clear / Async. load ; Non-global   ;
+; FLASH       ; 55     ; 3       ; Clock                      ; Pin          ;
+; NUM[1]~5    ; LC2_E4 ; 3       ; Clock enable               ; Non-global   ;
++-------------+--------+---------+----------------------------+--------------+
 
 
 +----------------------------------+
@@ -367,7 +367,8 @@ applicable agreement for further details.
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 1     ;
+; 2      ; 5     ;
+; 3      ; 1     ;
 +--------+-------+
 
 
@@ -376,56 +377,56 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------+---------+
 ; Name                                                                     ; Fan-Out ;
 +--------------------------------------------------------------------------+---------+
-; COU[1]~16                                                                ; 54      ;
-; COU[2]~15                                                                ; 52      ;
-; COU[0]~20                                                                ; 52      ;
-; COU[3]~17                                                                ; 42      ;
-; COU[4]~18                                                                ; 31      ;
-; Equal2~2                                                                 ; 26      ;
+; COU[2]~13                                                                ; 79      ;
+; COU[1]~14                                                                ; 71      ;
+; COU[0]~17                                                                ; 67      ;
+; COU[3]~15                                                                ; 58      ;
+; COU[4]~16                                                                ; 42      ;
 ; ROTATY                                                                   ; 24      ;
-; process_2~4                                                              ; 22      ;
-; NUM[0]~9                                                                 ; 19      ;
+; process_2~4                                                              ; 23      ;
+; DISPLAY[0]                                                               ; 20      ;
 ; process_2~5                                                              ; 18      ;
-; NUM[1]~10                                                                ; 14      ;
-; NUM[2]~8                                                                 ; 13      ;
-; INITLED[1]                                                               ; 9       ;
-; INITLED[0]                                                               ; 9       ;
-; INITLED[2]                                                               ; 9       ;
-; Equal10~1                                                                ; 8       ;
-; NUMLED[7]~114                                                            ; 8       ;
-; OUTLED[6]~91                                                             ; 7       ;
-; Equal11~1                                                                ; 7       ;
-; CLK                                                                      ; 5       ;
+; NUM[0]~9                                                                 ; 18      ;
+; NUM[1]~8                                                                 ; 17      ;
+; DISPLAY[2]                                                               ; 17      ;
+; DISPLAY[1]                                                               ; 16      ;
+; NUM[2]~10                                                                ; 16      ;
+; Equal5~3                                                                 ; 10      ;
+; Equal5~4                                                                 ; 10      ;
+; Equal5~5                                                                 ; 10      ;
+; NUMLED[0]~162                                                            ; 8       ;
+; INITLED[0]                                                               ; 8       ;
+; INITLED[1]                                                               ; 8       ;
+; NUMLED[7]~165                                                            ; 8       ;
+; INITLED[2]                                                               ; 8       ;
+; OUTLED[6]~153                                                            ; 7       ;
+; process_1~4                                                              ; 6       ;
+; Mux20~2                                                                  ; 6       ;
 ; CLR                                                                      ; 5       ;
-; DISPLAY[1]                                                               ; 4       ;
-; DISPLAY[0]                                                               ; 4       ;
-; DISPLAY[2]                                                               ; 4       ;
-; Mux25~1                                                                  ; 4       ;
-; Mux6~4                                                                   ; 4       ;
-; Mux3~4                                                                   ; 3       ;
-; Mux6~3                                                                   ; 3       ;
-; Mux34~2                                                                  ; 3       ;
-; Mux3~3                                                                   ; 3       ;
-; OUTLED[5]~89                                                             ; 3       ;
-; NUM[2]~11                                                                ; 3       ;
-; NUMLED[5]~130                                                            ; 2       ;
-; NUMLED[5]~131                                                            ; 2       ;
+; CLK                                                                      ; 5       ;
+; Mux17~2                                                                  ; 5       ;
+; Mux40~2                                                                  ; 4       ;
+; Mux34~2                                                                  ; 4       ;
+; Mux20~3                                                                  ; 4       ;
+; Mux47~1                                                                  ; 3       ;
+; NUM[1]~11                                                                ; 3       ;
+; Mux19~2                                                                  ; 3       ;
+; Mux17~3                                                                  ; 3       ;
+; Mux16~2                                                                  ; 3       ;
+; NUMLED[0]~178                                                            ; 3       ;
 ; OUTLED[6]$latch~1                                                        ; 2       ;
-; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; 2       ;
-; Mux3~5                                                                   ; 2       ;
+; OUTLED[3]~206                                                            ; 2       ;
+; OUTLED[4]~148                                                            ; 2       ;
 ; NUMLED[6]$latch~1                                                        ; 2       ;
-; Mux2~2                                                                   ; 2       ;
-; Mux23~1                                                                  ; 2       ;
 ; OUTLED[5]$latch~1                                                        ; 2       ;
-; NUMLED[2]$latch~1                                                        ; 2       ;
-; NUMLED[7]~112                                                            ; 2       ;
 ; OUTLED[4]$latch~1                                                        ; 2       ;
+; Mux38~1                                                                  ; 2       ;
+; Mux23~2                                                                  ; 2       ;
+; NUMLED[2]$latch~1                                                        ; 2       ;
 ; NUMLED[5]$latch~1                                                        ; 2       ;
+; Mux96~1                                                                  ; 2       ;
 ; OUTLED[3]$latch~1                                                        ; 2       ;
-; Mux14~2                                                                  ; 2       ;
-; Mux34~3                                                                  ; 2       ;
-; OUTLED[2]$latch~1                                                        ; 2       ;
-; OUTLED[1]~95                                                             ; 2       ;
+; lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; 2       ;
 +--------------------------------------------------------------------------+---------+
 
 
@@ -434,15 +435,15 @@ applicable agreement for further details.
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 115            ;
-; 1                        ; 4              ;
-; 2                        ; 1              ;
+; 0                        ; 108            ;
+; 1                        ; 7              ;
+; 2                        ; 0              ;
 ; 3                        ; 0              ;
 ; 4                        ; 0              ;
 ; 5                        ; 0              ;
-; 6                        ; 2              ;
-; 7                        ; 7              ;
-; 8                        ; 15             ;
+; 6                        ; 0              ;
+; 7                        ; 3              ;
+; 8                        ; 26             ;
 +--------------------------+----------------+
 
 
@@ -451,15 +452,15 @@ applicable agreement for further details.
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 120            ;
-; 1                           ; 1              ;
+; 0                           ; 115            ;
+; 1                           ; 4              ;
 ; 2                           ; 2              ;
 ; 3                           ; 3              ;
-; 4                           ; 1              ;
-; 5                           ; 7              ;
-; 6                           ; 2              ;
-; 7                           ; 4              ;
-; 8                           ; 4              ;
+; 4                           ; 4              ;
+; 5                           ; 5              ;
+; 6                           ; 3              ;
+; 7                           ; 3              ;
+; 8                           ; 5              ;
 +-----------------------------+----------------+
 
 
@@ -468,70 +469,65 @@ applicable agreement for further details.
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0                          ; 115            ;
-; 1                          ; 0              ;
-; 2                          ; 2              ;
-; 3                          ; 3              ;
-; 4                          ; 2              ;
-; 5                          ; 2              ;
-; 6                          ; 2              ;
-; 7                          ; 2              ;
-; 8                          ; 0              ;
-; 9                          ; 3              ;
-; 10                         ; 3              ;
-; 11                         ; 2              ;
-; 12                         ; 3              ;
-; 13                         ; 3              ;
-; 14                         ; 2              ;
+; 0 - 1                      ; 109            ;
+; 2 - 3                      ; 4              ;
+; 4 - 5                      ; 7              ;
+; 6 - 7                      ; 2              ;
+; 8 - 9                      ; 6              ;
+; 10 - 11                    ; 2              ;
+; 12 - 13                    ; 6              ;
+; 14 - 15                    ; 3              ;
+; 16 - 17                    ; 4              ;
+; 18 - 19                    ; 1              ;
 +----------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Row Interconnect                                                                       ;
-+-------+-------------------+-----------------------------+------------------------------+
-; Row   ; Interconnect Used ; Left Half Interconnect Used ; Right Half Interconnect Used ;
-+-------+-------------------+-----------------------------+------------------------------+
-;  A    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  1 / 48 ( 2 % )              ;
-;  B    ;  14 / 96 ( 15 % ) ;  1 / 48 ( 2 % )             ;  6 / 48 ( 13 % )             ;
-;  C    ;  40 / 96 ( 42 % ) ;  14 / 48 ( 29 % )           ;  25 / 48 ( 52 % )            ;
-;  D    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
-;  E    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
-;  F    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
-; Total ;  54 / 576 ( 9 % ) ;  15 / 288 ( 5 % )           ;  32 / 288 ( 11 % )           ;
-+-------+-------------------+-----------------------------+------------------------------+
++-----------------------------------------------------------------------------------------+
+; Row Interconnect                                                                        ;
++-------+--------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+--------------------+-----------------------------+------------------------------+
+;  A    ;  8 / 96 ( 8 % )    ;  0 / 48 ( 0 % )             ;  5 / 48 ( 10 % )             ;
+;  B    ;  0 / 96 ( 0 % )    ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+;  C    ;  9 / 96 ( 9 % )    ;  1 / 48 ( 2 % )             ;  12 / 48 ( 25 % )            ;
+;  D    ;  71 / 96 ( 74 % )  ;  11 / 48 ( 23 % )           ;  31 / 48 ( 65 % )            ;
+;  E    ;  0 / 96 ( 0 % )    ;  1 / 48 ( 2 % )             ;  0 / 48 ( 0 % )              ;
+;  F    ;  0 / 96 ( 0 % )    ;  2 / 48 ( 4 % )             ;  0 / 48 ( 0 % )              ;
+; Total ;  88 / 576 ( 15 % ) ;  15 / 288 ( 5 % )           ;  48 / 288 ( 17 % )           ;
++-------+--------------------+-----------------------------+------------------------------+
 
 
-+---------------------------+
-; LAB Column Interconnect   ;
-+-------+-------------------+
-; Col.  ; Interconnect Used ;
-+-------+-------------------+
-; 1     ;  1 / 24 ( 4 % )   ;
-; 2     ;  0 / 24 ( 0 % )   ;
-; 3     ;  0 / 24 ( 0 % )   ;
-; 4     ;  0 / 24 ( 0 % )   ;
-; 5     ;  0 / 24 ( 0 % )   ;
-; 6     ;  0 / 24 ( 0 % )   ;
-; 7     ;  4 / 24 ( 17 % )  ;
-; 8     ;  1 / 24 ( 4 % )   ;
-; 9     ;  2 / 24 ( 8 % )   ;
-; 10    ;  6 / 24 ( 25 % )  ;
-; 11    ;  2 / 24 ( 8 % )   ;
-; 12    ;  2 / 24 ( 8 % )   ;
-; 13    ;  1 / 24 ( 4 % )   ;
-; 14    ;  0 / 24 ( 0 % )   ;
-; 15    ;  2 / 24 ( 8 % )   ;
-; 16    ;  3 / 24 ( 13 % )  ;
-; 17    ;  6 / 24 ( 25 % )  ;
-; 18    ;  2 / 24 ( 8 % )   ;
-; 19    ;  1 / 24 ( 4 % )   ;
-; 20    ;  3 / 24 ( 13 % )  ;
-; 21    ;  1 / 24 ( 4 % )   ;
-; 22    ;  1 / 24 ( 4 % )   ;
-; 23    ;  2 / 24 ( 8 % )   ;
-; 24    ;  3 / 24 ( 13 % )  ;
-; Total ;  43 / 576 ( 7 % ) ;
-+-------+-------------------+
++----------------------------+
+; LAB Column Interconnect    ;
++-------+--------------------+
+; Col.  ; Interconnect Used  ;
++-------+--------------------+
+; 1     ;  0 / 24 ( 0 % )    ;
+; 2     ;  3 / 24 ( 13 % )   ;
+; 3     ;  1 / 24 ( 4 % )    ;
+; 4     ;  2 / 24 ( 8 % )    ;
+; 5     ;  0 / 24 ( 0 % )    ;
+; 6     ;  0 / 24 ( 0 % )    ;
+; 7     ;  3 / 24 ( 13 % )   ;
+; 8     ;  1 / 24 ( 4 % )    ;
+; 9     ;  5 / 24 ( 21 % )   ;
+; 10    ;  5 / 24 ( 21 % )   ;
+; 11    ;  1 / 24 ( 4 % )    ;
+; 12    ;  1 / 24 ( 4 % )    ;
+; 13    ;  2 / 24 ( 8 % )    ;
+; 14    ;  1 / 24 ( 4 % )    ;
+; 15    ;  3 / 24 ( 13 % )   ;
+; 16    ;  3 / 24 ( 13 % )   ;
+; 17    ;  5 / 24 ( 21 % )   ;
+; 18    ;  5 / 24 ( 21 % )   ;
+; 19    ;  6 / 24 ( 25 % )   ;
+; 20    ;  3 / 24 ( 13 % )   ;
+; 21    ;  2 / 24 ( 8 % )    ;
+; 22    ;  2 / 24 ( 8 % )    ;
+; 23    ;  1 / 24 ( 4 % )    ;
+; 24    ;  1 / 24 ( 4 % )    ;
+; Total ;  56 / 576 ( 10 % ) ;
++-------+--------------------+
 
 
 +---------------------------+
@@ -549,7 +545,7 @@ applicable agreement for further details.
 +-----------------------------------+----------------------+
 ; Resource                          ; Usage                ;
 +-----------------------------------+----------------------+
-; Total logic elements              ; 187 / 1,152 ( 16 % ) ;
+; Total logic elements              ; 236 / 1,152 ( 20 % ) ;
 ; Registers                         ; 8 / 1,152 ( < 1 % )  ;
 ; Logic elements in carry chains    ; 4                    ;
 ; User inserted logic elements      ; 0                    ;
@@ -560,12 +556,12 @@ applicable agreement for further details.
 ; EABs                              ; 0 / 6 ( 0 % )        ;
 ; Total memory bits                 ; 0 / 12,288 ( 0 % )   ;
 ; Total RAM block bits              ; 0 / 12,288 ( 0 % )   ;
-; Maximum fan-out node              ; COU[1]               ;
-; Maximum fan-out                   ; 54                   ;
-; Highest non-global fan-out signal ; COU[1]               ;
-; Highest non-global fan-out        ; 54                   ;
-; Total fan-out                     ; 672                  ;
-; Average fan-out                   ; 3.17                 ;
+; Maximum fan-out node              ; COU[2]               ;
+; Maximum fan-out                   ; 79                   ;
+; Highest non-global fan-out signal ; COU[2]               ;
+; Highest non-global fan-out        ; 79                   ;
+; Total fan-out                     ; 864                  ;
+; Average fan-out                   ; 3.31                 ;
 +-----------------------------------+----------------------+
 
 
@@ -574,7 +570,7 @@ applicable agreement for further details.
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |LED                               ; 187 (183)   ; 8            ; 0           ; 25   ; 179 (175)    ; 2 (2)             ; 6 (6)            ; 4 (0)           ; 0 (0)      ; |LED                                                        ; work         ;
+; |LED                               ; 236 (232)   ; 8            ; 0           ; 25   ; 228 (224)    ; 2 (2)             ; 6 (6)            ; 4 (0)           ; 0 (0)      ; |LED                                                        ; work         ;
 ;    |lpm_add_sub:Add1|              ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |LED|lpm_add_sub:Add1                                       ; work         ;
 ;       |addcore:adder|              ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |LED|lpm_add_sub:Add1|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |LED|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -591,9 +587,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; INITLED[1] ; Input    ; OFF         ;
 ; INITLED[0] ; Input    ; OFF         ;
 ; ROTATY     ; Input    ; OFF         ;
+; DISPLAY[1] ; Input    ; OFF         ;
 ; DISPLAY[2] ; Input    ; OFF         ;
 ; DISPLAY[0] ; Input    ; OFF         ;
-; DISPLAY[1] ; Input    ; OFF         ;
 ; CLK        ; Input    ; OFF         ;
 ; CLR        ; Input    ; OFF         ;
 ; FLASH      ; Input    ; OFF         ;
@@ -627,7 +623,7 @@ The pin-out file can be found in E:/Code/Quartus 2/LED/LED.pin.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Apr 18 21:21:07 2019
+    Info: Processing started: Fri Apr 19 20:40:33 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off LED -c LED
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EPF10K20TC144-4 for design "LED"
@@ -638,17 +634,17 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Thu Apr 18 2019 at 21:21:07
+Info: Started fitting attempt 1 on Fri Apr 19 2019 at 20:40:33
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
-Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations ending: elapsed time is 00:00:01
 Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 258 megabytes
-    Info: Processing ended: Thu Apr 18 21:21:08 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 259 megabytes
+    Info: Processing ended: Fri Apr 19 20:40:35 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

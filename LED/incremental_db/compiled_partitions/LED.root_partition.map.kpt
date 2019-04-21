@@ -21,12 +21,12 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="2" type="proxy"></kp>
+          <kp id="1" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="4" type="proxy"></kp>
+          <kp id="3" type="proxy"></kp>
         </kp_state>
       </kp_set>
     <state_table type="virtual" num_cols="1">
@@ -41,12 +41,12 @@
   <transformation>
     <kp_set type="reference">
       <kp_state index="0">
-        <kp id="1" type="proxy"></kp>
+        <kp id="2" type="proxy"></kp>
       </kp_state>
     </kp_set>
     <kp_set type="transformed">
       <kp_state index="0">
-        <kp id="3" type="proxy"></kp>
+        <kp id="4" type="proxy"></kp>
       </kp_state>
     </kp_set>
   <state_table type="virtual" num_cols="1">

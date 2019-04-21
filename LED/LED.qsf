@@ -70,6 +70,6 @@ set_location_assignment PIN_122 -to CLK
 set_location_assignment PIN_60 -to ROTATY
 set_location_assignment PIN_62 -to CLR
 set_location_assignment PIN_55 -to FLASH
-set_location_assignment PIN_63 -to DISPLAY[2]
+set_location_assignment PIN_65 -to DISPLAY[2]
 set_location_assignment PIN_64 -to DISPLAY[1]
-set_location_assignment PIN_65 -to DISPLAY[0]
+set_location_assignment PIN_63 -to DISPLAY[0]
